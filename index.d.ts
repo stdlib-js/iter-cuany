@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2024 The Stdlib Authors.
@@ -16,45 +16,49 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
+
+import { Iterator as Iter, IterableIterator } from '@stdlib/types/iter';
+
+// Define a union type representing both iterable and non-iterable iterators:
+type Iterator = Iter | IterableIterator;
 
 /**
-* Create an iterator which cumulatively tests whether at least one iterated value is truthy.
+* Returns an iterator which cumulatively tests whether at least one iterated value is truthy.
 *
-* @module @stdlib/iter-cuany
+* @param iterator - input iterator
+* @returns iterator
 *
 * @example
 * var array2iterator = require( '@stdlib/array-to-iterator' );
-* var iterCuAny = require( '@stdlib/iter-cuany' );
 *
 * var arr = array2iterator( [ false, false, false, true, false ] );
 *
 * var it = iterCuAny( arr );
 *
 * var v = it.next().value;
-* // returns false
+* returns false
 *
 * v = it.next().value;
-* // returns false
+* returns false
 *
 * v = it.next().value;
-* // returns false
+* returns false
 *
 * v = it.next().value;
-* // returns true
+* returns true
 *
 * v = it.next().value;
-* // returns true
+* returns true
 *
 * var bool = it.next().done;
-* // returns true
+* returns true
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function iterCuAny( iterator: Iterator ): Iterator;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = iterCuAny;
