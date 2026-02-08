@@ -52,6 +52,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import iterCuAny from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-cuany@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/iter-cuany/tags). For example,
+
+```javascript
 import iterCuAny from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-cuany@v0.1.2-deno/mod.js';
 ```
 
@@ -114,7 +119,7 @@ The returned [iterator][mdn-iterator-protocol] protocol-compliant object has the
 ```javascript
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-randu@deno/mod.js';
 import iterMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-map@deno/mod.js';
-import iterCuAny from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-cuany@v0.1.2-deno/mod.js';
+import iterCuAny from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-cuany@deno/mod.js';
 
 function threshold( r ) {
     return ( r > 0.95 );
